@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My first Electron-App bitch</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- IMPORT VIEWS -->
+    <!-- <link rel="import" href="dashboard.view.html">
+    <link rel="import" href="settings.view.html"> -->
+  </head>
+  <body>
+    <h1>Image Exchanger</h1>
+    <section id="menu">
+      <nav>
+        <ul id="menuList">
+          <li><a class="menuItem" href="dashboard">Dashboard</a></li>
+          <li><a class="menuItem" href="settings">Settings</a></li>
+        </ul>
+      </nav>
+    </section>
+    <div id="contentWrapper">
+
+    </div>
+    <script>
+      window.$ = window.jQuery = require('jquery');
+      require('../scripts/menu.js');
+      const appConfig = require('../config/appConfig.js');
+      $(document).ready(() => {
+        $('#contentWrapper').load('dashboard.view.html');
+      });
+
+      require('electron').ipcRenderer.on('addImage', (event, image) => {
+            $("#imageList").prepend("<img class='listImage' src='" + image + "'>");
+            console.log('Image added!');
+        });
+    </script>
+  </body>
+</html>

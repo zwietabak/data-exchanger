@@ -1,0 +1,18 @@
+<section id="settings" class="fade-up">
+    <div id="labelSettingsList" class="headLabel">App-Settings</div>
+    <div id="settingsList" class="bodyList">
+        <table id="settingsTable" border="0">
+            <tr>
+                <td>Application port:</td>
+                <td><input type="text" name="appPort" maxlength="5"/></td>
+            </tr>
+            <tr>
+                <td>Upload directory:</td>
+                <td>
+                    <input type="button" id="customUploadDirButton" value="Choose path..." onclick="document.getElementById('uploadDir').click()" />
+                    <input id="uploadDir" type="file" webkitdirectory directory multiple style="display:none;"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

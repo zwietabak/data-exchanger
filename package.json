@@ -1,0 +1,27 @@
+{
+  "name": "data-exchanger",
+  "version": "0.0.1",
+  "description": "A tool to exchange data between devices over the network. No internet needed, no spy, no NSA and 100% vegan!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwietabak/data-exchanger.git"
+  },
+  "author": "I.P. Daily",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/zwietabak/data-exchanger/issues"
+  },
+  "homepage": "https://github.com/zwietabak/data-exchanger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bonjour": "^3.5.0",
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "ip": "^1.1.5",
+    "jquery": "^3.3.1"
+  }
+}

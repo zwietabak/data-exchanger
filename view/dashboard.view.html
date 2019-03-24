@@ -1,0 +1,16 @@
+<section id="dashboard" class="fade-up">
+    <div id="labelImageList" class="headLabel">Received images</div>
+    <div id="imageList" class="bodyList"></div>
+</section>
+<script>
+    $(document).ready(() => {
+        $.get("http://" + appConfig.apiIPAddress + ":" + appConfig.apiPort + "/imageUpload/recentImages", (data) => {
+            if (data != []) {
+                console.log(data);
+                data.forEach(imagePath => {
+                    $("#imageList").prepend("<img class='listImage' src='" + imagePath + "'>"); 
+                });
+            }
+        });
+    });
+</script>
